@@ -1,7 +1,7 @@
 //Error no. 1
 // no include directive - compiler doesn't knows what "cout" is.
 /*
- These special combinations of / and * are called multi-line comments
+ These special combinations of / and * are called multi-line comment aka Block Comment
  as oppose to // which can be used to comment a single line.
 */
 
