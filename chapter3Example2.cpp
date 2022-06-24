@@ -16,7 +16,7 @@ int main()
     //int number_of_steps = "Bilal";
     //string name1 = 30; 
     
-    // Five most commonly used (data)types
+    // Five most commonly used (data)types along with their literals - representing value of the corresponding type
     int num_of_steps = 39;   // int for integers
     double flying_time = 3.5;   // double for floating-point numbers
     char decimal_point = '.';   // char for individual characters
