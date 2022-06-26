@@ -16,6 +16,7 @@ int main()
         //<< "\nsquare root of m == " << sqrt(m)
         // type conversion of int to double
         << "\nsquare root of n - as double == " << sqrt((double)n) 
-        << '\n'; // name for newline (“end of line”) in output
+        << "\n" // name for newline (“end of line”) in output
+        <<"n % 2 == "<<n%2;
     return 0;
 }
