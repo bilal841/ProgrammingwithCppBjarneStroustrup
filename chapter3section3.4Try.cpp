@@ -14,7 +14,8 @@ int main()
         << "\nhalf of n == " << n/2
         << "\nsquare root of n - as int == " << sqrt(n)
         //<< "\nsquare root of m == " << sqrt(m)
-        << "\nsquare root of n - as double == " << sqrt((double)n) // type conversion of int to double
+        // type conversion of int to double
+        << "\nsquare root of n - as double == " << sqrt((double)n) 
         << '\n'; // name for newline (“end of line”) in output
     return 0;
 }
