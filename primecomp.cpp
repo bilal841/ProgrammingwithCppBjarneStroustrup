@@ -1,32 +1,40 @@
-#include<iostream>
-using namespace std;
+#include"std_lib_facilities.h"
 int main()
 {
-	cout<<"Prime-Composite"<<endl<<endl;
-	cout<<"Starting Number : 1"<<endl;
-	cout<<"Ending Number: 100"<<endl;
-	int n,j;
-	int prime; 
-	for(n=1;n<=1000;n++)
+	try
 	{
-		prime = 1;
-		for(j=2;j<n;j++)
+		cout<<"Prime-Composite"<<endl<<endl;
+		cout<<"Starting Number : 1"<<endl;
+		cout<<"Ending Number: 100"<<endl;
+		int n,j;
+		int prime; 
+		for(n=1;n<=1000;n++)
 		{
-			if(n%j==0)
+			prime = 1;
+			for(j=2;j<n;j++)
 			{
-				prime = 0 ;
-				break;
+				if(n%j==0)
+				{
+					prime = 0 ;
+					break;
+				}
 			}
-		}
-		if(prime==1)
-		{
-			cout<<n<<"\t Prime"<<endl;
-		}
-		else
-		{
-			cout<<n<<"\t Composite"<<endl;
-		}
+			if(prime==1)
+			{
+				cout<<n<<"\t Prime"<<endl;
+			}
+			else
+			{
+				cout<<n<<"\t Composite"<<endl;
+			}
 	}
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+	
 	
 	return 0;
 }
