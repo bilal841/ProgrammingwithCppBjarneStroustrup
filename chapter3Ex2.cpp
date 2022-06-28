@@ -3,15 +3,30 @@
 #include "std_lib_facilities.h"
 int main()
 {
-    double kilometers, miles;
+    double kilometers=0 , miles=0;
     
-    cout<<"Enter the number of miles: ";
-    cin>>miles;
+    try
+    {
+        cout<<"Enter the number of miles(integer or float value): ";
+        cin>>miles;
 
-    //1miler = 1.609 km
-    kilometers = miles * 1.609;
+        //error checking
+        if (!cin)
+        {
+            cout<<"Wrong Input \n";
+        }
 
-    cout<<miles<<" miles  = "<<kilometers<<" kms";
+        //1miler = 1.609 km
+        kilometers = miles * 1.609;
+
+        cout<<miles<<" miles  = "<<kilometers<<" kms";
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+    
 
     return 0;
 }

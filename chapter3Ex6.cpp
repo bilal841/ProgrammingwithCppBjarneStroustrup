@@ -19,7 +19,7 @@ int main()
         //Check the largest first - then decide between the remaining two
         // Larger of the remaining two will be the middle one .
 
-        //For the possibility that n1 is the largest
+        //For the possibility that n1 is the largest.
         if(n1 >= n2 && n1 >= n3)
         {
             largest = n1;

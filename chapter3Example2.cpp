@@ -4,7 +4,7 @@
 
 int main()
 {
-    //variable decelaration and initialization
+    //variable decelaration and initialization.
     // type variable_name = variable_value;
     // data_type variable_name = variable_value;
 

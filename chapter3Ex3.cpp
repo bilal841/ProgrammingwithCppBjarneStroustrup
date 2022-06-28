@@ -3,5 +3,6 @@
 #include "std_lib_facilities.h"
 int main()
 {
+    //no error checking needed
     return 0;
 }
