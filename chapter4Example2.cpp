@@ -45,6 +45,20 @@ int main()
         //val + 2
 
         //constexpr must be a given a value that is known as compile time
+        // vs const that can be used to initialize a constant with a value
+        // that is not known at compile
+        // But once the value is set it can't be changed.
+
+        int n;
+        cout<<"Enter an integer: ";
+        cin>>n;
+        constexpr int c1 = max + 7;
+        cout<<"c1 = "<<c1<<"\n";
+        const int c2 = n + 7;
+        cout<<"c2 = "<<c2<<"\n";
+        //error
+        //c1 = 12; //c1 is const
+        //c2 = 5; //c2 is const
         
         if(!cin)
         {
