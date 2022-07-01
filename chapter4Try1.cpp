@@ -27,6 +27,10 @@ int main()
         cout<<"Enter your currency amount followed by symbol y-yen , k-kroner, and p-pound:\n";
         cin>>currency_amount>>currency_unit;
 
+        if(!cin)
+        {
+            error("Something went wrong with the input \n");
+        }
         //check the unit and perform appropriate conversion
         if(currency_unit == 'y')
         {
@@ -44,10 +48,7 @@ int main()
         {
             cout<<"Sorry , unkown currency unit\n";
         }
-        if(!cin)
-        {
-            error("Something went wrong with the input \n");
-        }
+      
     }
     catch(const std::exception& e)
     {
