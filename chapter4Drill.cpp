@@ -277,7 +277,7 @@ int main()
         double current_largest = -299792458 ;
         string unit = "";
 
-        cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+        cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to end input\n";
         while(cin>>length>>unit)
         {
             
@@ -325,17 +325,18 @@ int main()
                     current_largest = converted_length_meters;
                     cout<<converted_length_meters<<"m largest so far.\n";
                 }
-                cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+                cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to end input\n";
             }
             
         }
-
+        //Display all the values stored in the vector
         for(double l:input_lengths)
         {
             cout<<l<<"m\n";
         }
         */
         // Step 11 -Sort out in increasing order
+        ///*
         double length = 0;
         vector<double> input_lengths;
         double converted_length_meters = 0;
@@ -343,7 +344,7 @@ int main()
         double current_largest = -299792458 ;
         string unit = "";
 
-        cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+        cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to end input\n";
         while(cin>>length>>unit)
         {
             
@@ -391,18 +392,18 @@ int main()
                     current_largest = converted_length_meters;
                     cout<<converted_length_meters<<"m largest so far.\n";
                 }
-                cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+                cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to end input\n";
             }
             
         }
         // sort the vector in increasing order
         sort(input_lengths);
-
+        //Display the sorted values
         for(double l:input_lengths)
         {
             cout<<l<<"m\n";
         }
-
+        //*/
     }
     catch(const std::exception& e)
     {
