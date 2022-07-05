@@ -95,6 +95,7 @@ int main()
         }
         */
        //Step 5
+       /*
         double n1 = 0;
         double n2 = 0;
         double difference = 0;
@@ -128,7 +129,27 @@ int main()
         {
             cout<<"The numbers are almost equal.\n";
         }
-        
+        */
+        //Step 1
+        double n1 = 0;
+        double current_smallest = 299792458 ;
+        double current_largest = -299792458 ;
+        cout<<"Input a floating point value - Input | to exit:";
+        while(cin>>n1)
+        {
+            if(n1<current_smallest)
+            {
+                current_smallest = n1;
+                cout<<current_smallest<<" smallest so far.\n";
+            }
+
+            if(n1>current_largest)
+            {
+                current_largest = n1;
+                cout<<current_largest<<" largest so far.\n";
+            }
+          cout<<"Input a floating point value - Input | to exit:";
+        }
 
     }
     catch(const std::exception& e)
