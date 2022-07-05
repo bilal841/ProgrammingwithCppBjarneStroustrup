@@ -212,6 +212,7 @@ int main()
         // Keep track of th sum of values
         // Largest and Smallest of the values
         // Common unit - meters
+        /*
         double length = 0;
         double converted_length_meters = 0;
         double current_smallest = 299792458 ;
@@ -266,9 +267,141 @@ int main()
             }
             
         }
-        
-        //Step 10
-        // Step 11
+        */
+        //Step 10 - Keep in a vector 
+        /*
+        double length = 0;
+        vector<double> input_lengths;
+        double converted_length_meters = 0;
+        double current_smallest = 299792458 ;
+        double current_largest = -299792458 ;
+        string unit = "";
+
+        cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+        while(cin>>length>>unit)
+        {
+            
+            // if the unit is any thing else - indicate as such
+            if(unit !="cm" && unit !="m" && unit != "in" && unit !="ft" )
+            {
+                  cout<<"Illegal Units\n";
+            }
+            //check the unit and perform appropriate conversion and pusback into vector
+            else
+            {
+                if(unit == "cm")
+                {
+                    converted_length_meters = length/100.0;
+                    cout<<converted_length_meters<<"m\n";
+                    input_lengths.push_back(converted_length_meters);       
+                }
+                else if(unit == "m")
+                {
+                    converted_length_meters  = length;
+                    cout<<converted_length_meters<<"m\n";
+                    input_lengths.push_back(converted_length_meters);
+                }
+                else if (unit == "in")
+                {
+                    
+                    converted_length_meters =  length*2.54/100;
+                    cout<<converted_length_meters<<"m\n";
+                    input_lengths.push_back(converted_length_meters);
+                }
+                else if (unit == "ft")
+                {
+                    converted_length_meters = length*12.0*2.54/100.0; 
+                    cout<<converted_length_meters<<" m\n";
+                    input_lengths.push_back(converted_length_meters);
+                }
+                
+                if(converted_length_meters < current_smallest)
+                {
+                    current_smallest = converted_length_meters;
+                    cout<<current_smallest<<"m smallest so far.\n";
+                }
+                if(converted_length_meters > current_largest)
+                {
+                    current_largest = converted_length_meters;
+                    cout<<converted_length_meters<<"m largest so far.\n";
+                }
+                cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+            }
+            
+        }
+
+        for(double l:input_lengths)
+        {
+            cout<<l<<"m\n";
+        }
+        */
+        // Step 11 -Sort out in increasing order
+        double length = 0;
+        vector<double> input_lengths;
+        double converted_length_meters = 0;
+        double current_smallest = 299792458 ;
+        double current_largest = -299792458 ;
+        string unit = "";
+
+        cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+        while(cin>>length>>unit)
+        {
+            
+            // if the unit is any thing else - indicate as such
+            if(unit !="cm" && unit !="m" && unit != "in" && unit !="ft" )
+            {
+                  cout<<"Illegal Units\n";
+            }
+            //check the unit and perform appropriate conversion and pusback into vector
+            else
+            {
+                if(unit == "cm")
+                {
+                    converted_length_meters = length/100.0;
+                    cout<<converted_length_meters<<"m\n";
+                    input_lengths.push_back(converted_length_meters);       
+                }
+                else if(unit == "m")
+                {
+                    converted_length_meters  = length;
+                    cout<<converted_length_meters<<"m\n";
+                    input_lengths.push_back(converted_length_meters);
+                }
+                else if (unit == "in")
+                {
+                    
+                    converted_length_meters =  length*2.54/100;
+                    cout<<converted_length_meters<<"m\n";
+                    input_lengths.push_back(converted_length_meters);
+                }
+                else if (unit == "ft")
+                {
+                    converted_length_meters = length*12.0*2.54/100.0; 
+                    cout<<converted_length_meters<<" m\n";
+                    input_lengths.push_back(converted_length_meters);
+                }
+                
+                if(converted_length_meters < current_smallest)
+                {
+                    current_smallest = converted_length_meters;
+                    cout<<current_smallest<<"m smallest so far.\n";
+                }
+                if(converted_length_meters > current_largest)
+                {
+                    current_largest = converted_length_meters;
+                    cout<<converted_length_meters<<"m largest so far.\n";
+                }
+                cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
+            }
+            
+        }
+        // sort the vector in increasing order
+        sort(input_lengths);
+
+        for(double l:input_lengths)
+        {
+            cout<<l<<"m\n";
+        }
 
     }
     catch(const std::exception& e)
