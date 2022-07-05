@@ -67,6 +67,7 @@ int main()
             cout<<"The numbers are equal.\n";
         }
         */
+       /*
        //Step 4
         double n1 = 0;
         double n2 = 0;
@@ -92,6 +93,43 @@ int main()
         {
             cout<<"The numbers are equal.\n";
         }
+        */
+       //Step 5
+        double n1 = 0;
+        double n2 = 0;
+        double difference = 0;
+        cout<<"Input two Floating point values : ";
+        cin>>n1>>n2;
+        
+        if(!cin)
+        {
+            error("Something's wrong with input.\n");
+        }
+
+        if(n1<n2)
+        {
+            cout<<"The smaller value is : "<<n1<<"\n";
+            cout<<"The larger value is : "<<n2<<"\n";
+        }
+        else if(n2<n1)
+        {
+            cout<<"The smaller value is : "<<n2<<"\n";
+            cout<<"The larger value is : "<<n1<<"\n";
+        }
+        else
+        {
+            cout<<"The numbers are equal.\n";
+        }
+        //calculate the absolute value of the difference and see if the numbers
+        // are within 0.01 of each other
+        difference = abs(n1-n2);
+        cout<<"Difference: "<<difference<<"\n";
+        if(difference <= 0.01)
+        {
+            cout<<"The numbers are almost equal.\n";
+        }
+        
+
     }
     catch(const std::exception& e)
     {
