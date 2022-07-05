@@ -148,7 +148,7 @@ int main()
         */
        
        //Step 7
-       //Step 6
+       //Step 8
         double length = 0;
         double current_smallest = 299792458 ;
         double current_largest = -299792458 ;
@@ -159,7 +159,7 @@ int main()
         {
             
             // if the unit is any thing else - indicate as such
-            if(unit !="cm" || unit =="m" || unit == "in" || unit =="ft" )
+            if(unit !="cm" && unit !="m" && unit != "in" && unit !="ft" )
             {
                   cout<<"Illegal Units\n";
             }
@@ -168,30 +168,30 @@ int main()
             {
                 if(unit == "cm")
                 {
-                    cout<<" m\n"
-                        <<" in\n"
-                        <<" ft\n";
+                    cout<<length/100.0<<" m\n"
+                        <<length/2.54<<" in\n"
+                        <<length/2.54/12.0<<" ft\n";
                 }
                 else if (unit == "m")
                 {
-                    cout<<" cm\n"
-                        <<" in\n"
-                        <<" ft\n";
+                    cout<<length*100<<" cm\n"
+                        <<length*100/2.54<<" in\n"
+                        <<length*100/2.54/12.0<<" ft\n";
                 
                 }
                 else if (unit == "in")
                 {
-                    cout<<" cm\n"
-                        <<" m\n"
-                        <<" ft\n";
+                    cout<<length*2.54<<" cm\n"
+                        <<length*2.54/100<<" m\n"
+                        <<length/12.0<<" ft\n";
                 }
                 else if (unit == "ft")
                 {
-                    cout<<" cm\n"
-                        <<" m\n"
-                        <<" in\n";
+                    cout<<length*12.0*2.54<<" cm\n"
+                        <<length*12.0*2.54/100.0<<" m\n"
+                        <<length*12.0<<" in\n";
                 }
-              
+                /* - not needed in this step as the units are different
                 if(length<current_smallest)
                 {
                     current_smallest = length;
@@ -202,10 +202,18 @@ int main()
                     current_largest = length;
                     cout<<current_largest<<unit<<" largest so far.\n";
                 }
+                */
                 cout<<"Input a length with unit (cm, m, in, ft)\nInput Ctrl+Z+Enter to exit\n";
             }
             
         }
+
+        //Step 9 -
+        // Keep track of th sum of values
+        // Largest and Smallest of the values
+        // Common unit - meters
+        //Step 10
+        // Step 11
 
     }
     catch(const std::exception& e)
