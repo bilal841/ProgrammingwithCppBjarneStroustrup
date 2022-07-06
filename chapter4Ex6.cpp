@@ -24,7 +24,7 @@ int main()
     try
     {
         vector<string> digit_strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        vector<int> digit_numeric = {0,1,2,3,4,5,6,7,8,9};
+        //vector<int> digit_numeric = {0,1,2,3,4,5,6,7,8,9};
         
         int digit_input;
         
