@@ -10,7 +10,7 @@
 int main()
 {
     
-    prinf("Press ~ to exit:");
+    printf("Press ~ to exit:");
     getchar();
     return 0;
 }
