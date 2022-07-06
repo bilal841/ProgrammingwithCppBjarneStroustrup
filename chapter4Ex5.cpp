@@ -6,7 +6,6 @@
     the user to enter three arguments: two double values and a character to
     represent an operation. If the entry arguments are 35.6, 24.1, and '+', the
     program output should be The sum of 35.6 and 24.1 is 59.7.
-
     
     Strategy:
     Use a switch statement and handle each type of operation in a separate case.
