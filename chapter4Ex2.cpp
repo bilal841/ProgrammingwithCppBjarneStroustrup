@@ -1,14 +1,14 @@
-// Chapter 4 Exercise 2 - Fix the median 
-// A median of the series of values is such that exactly as many values
-// come before it as in the series as come after it.
-
-// Strategy:
-// Check the parity of the number of elements in the series 
-//Odd number of elements in series - Middle element is the median
-// Even number of elements - Take the average of the two center elements.
-
-//Vectors are mainly used to hold and manipulate data in programs
 /*
+    Chapter 4 Exercise 2 - Fix the median 
+    A median of the series of values is such that exactly as many values
+    come before it as in the series as come after it.
+
+    Strategy:
+    Check the parity of the number of elements in the series 
+    Odd number of elements in series - Middle element is the median
+    Even number of elements - Take the average of the two center elements.
+
+    Vectors are mainly used to hold and manipulate data in programs
     Program that reads and stores daily temperatures recorded in a week.
     It then calculates the average and median temperature values.
     
