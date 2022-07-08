@@ -41,22 +41,40 @@ int main()
     try
     {
         int square_index = 0;
-        // int square_grains = 0;
+        //int square_grains = 0;
         // int total_grains = 0;
         double square_grains = 0;
         double total_grains = 0;
         //int grains_to_be_awarded = 0;
+        
+        //As there are 64 squares in a chess board and the number of grains are doubled on each successive square
+        //2^64 - 1 would be the number of grains on the 64th square 
+        //Proof at https://en.wikipedia.org/wiki/Wheat_and_chessboard_problem
 
+        cout<<"Size of int in Byte: "<<sizeof(int)<<"\n";
+        cout<<"Size of double in Byte: "<<sizeof(double)<<"\n"; 
+       
+        total_grains = pow(2,64) - 1;
+        
+        cout<<"Total grains inventor asked for "<<total_grains<<"\n";
+
+        //Brute Force Solution
         //cout<<"Enter the number of grains to be awarded to the inventor of chess:";
         //while(cin>> grains_to_be_awarded)
         //{
+        cout<<"Brute Force Solution:\n Calculate grains for each square and add to previous total:\n";
+        //reset to zero
+        total_grains = 0;
         for(square_index=0; square_index <= 63; ++square_index)
         {
                 square_grains = pow(2,square_index);
                 cout<<"Square "<<square_index+1<<" Grains == "<<square_grains<<"\n"; 
                 total_grains += square_grains ;
-                cout<<"Total Grains awarded so far == "<<total_grains<<"\n";
+                cout<<"Total Grains till "<<square_index+1<<" square == "<<total_grains<<"\n";
         }
+        cout<<"Total grains inventor asked for "<<total_grains<<"\n";
+       
+        
         //Range of Data type 
         //For int - 2^32 -i.e, 32nd square goes out of range for int
         // For double - 
