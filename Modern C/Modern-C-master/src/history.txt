@@ -1,0 +1,44 @@
+    1  pwd
+    2  cd /
+    3  ls
+    4  cd mnt
+    5  ls
+    6  cd f
+    7  ls
+    8  cd Side\ Projects/
+    9  cd C++/
+   10  clear
+   11  ls
+   12  gcc
+   13  sudo apt install gcc
+   14  sudo apt install g++
+   15  python
+   16  python3
+   17  cls
+   18  clear
+   19  ls
+   20  cd Modern-C-master/
+   21  ls
+   22  cd src
+   23  ls
+   24  g++ 1_sequential_sorting.c
+   25  clear
+   26  g++ 3_pi.c
+   27  ./a.out
+   28  clear
+   29  cat 3_pi.c
+   30  vim 3_pi.c
+   31  cat 3_pi.c
+   32  cls
+   33  clear
+   34  g++ 3_pi.c
+   35  ./a.out
+   36  time()
+   37  time
+   38  date
+   39  uname
+   40  uname -a
+   41  lspci
+   42  clear
+   43  history
+   44  history > history.txt
