@@ -22,17 +22,53 @@
 */
 #include "std_lib_facilities.h"
 #include<time.h>
+
+int get_random()
+{
+    srand(time(0));
+    int random_number = 0;
+    random_number = rand() % 3 + 1;
+    return random_number;
+}
+
+string computer_try()
+{
+    
+    string comp_try = "";
+
+    int random = get_random();
+
+    switch(random)
+    {
+        case 1:
+            comp_try = "rock";
+            break;
+        case 2:
+            comp_try = "paper";
+            break;
+        case 3:
+            comp_try = "scissors";
+            break;
+        default:
+            comp_try = "";
+            break;
+    }
+    return comp_try;
+
+}
 int main()
 {
     try
     {
         int player_try = 0 ;
         srand(time(0));
-        while(cin>>player_try)
+        string player = "";
+        cout<<"rock, paper, scissors:\n\n";
+        while(cin>>player)
         {
             int computer_turn = 0 ;
             computer_turn = rand() % 3 + 1;
-            cout<<"Computer Turn "<<computer_turn<<"\n";
+            cout<<"Computer Turn "<<computer_try()<<"\n";
         }
         // if(!cin)
         // {
