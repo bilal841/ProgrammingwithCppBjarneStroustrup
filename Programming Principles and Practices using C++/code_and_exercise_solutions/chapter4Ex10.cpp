@@ -31,12 +31,9 @@ int main()
         while(cin>>player_try)
         {
             int computer_turn = 0 ;
-           
             computer_turn = rand() % 3 + 1;
             cout<<"Computer Turn "<<computer_turn<<"\n";
-        
         }
-        
         // if(!cin)
         // {
         //     error("Something went wrong with the input \n");
