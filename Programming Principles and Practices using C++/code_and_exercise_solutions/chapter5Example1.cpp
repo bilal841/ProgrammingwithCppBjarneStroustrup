@@ -52,7 +52,29 @@ int main()
         //Since the area() has two arguments - 
         int s4 = area('7','3'); 
         // although the compiler doesn't generate an error- this will result in runtime error
-        cout<<s4<<endl;
+        cout<<"area(\'7\',\'3\') == "<<s4<<endl;
+        //Conversion from char to int - ASCII values of '7' and '3' - result will be incorrect
+        
+        //Type errors
+
+        //int x0 = arena(7); //undeclated function
+        //int x1 = area(7); //incorrect number of arguments
+        //int x2 = area("seven",2); //incorrect type of argument
+        
+        //Non-errors - Errors which are not detected by compilers but will produce unexpected results
+        
+        //Will compile but can width be -7 ???
+        int x4 = area(10,-7);
+        cout<<"area(\'10\',\'-7\') == "<<x4<<"\n";
+
+        //Ok but will truncate arguments - call area(10,9)
+        int x5 = area(10.7,9.3);
+        cout<<"area(10.7,9.3) == "<<x5<<"\n";
+
+        //Ok but result will be truncated to char
+        char x6 = area(100,9999);
+        cout<<"area(100,9999) == "<<x6<<"\n";
+
         if(!cin)
         {
             error("Something went wrong with the input \n");
